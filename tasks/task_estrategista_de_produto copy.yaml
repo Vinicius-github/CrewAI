@@ -1,0 +1,24 @@
+task_estrategista_de_produto:
+  description: >
+    Baseado nos outputs do analista de dados, elabore um relatório executivo em Markdown.
+
+    Use os seguintes inputs:
+    - Resumo da análise textual no arquivo `output_tables/resumo_analyze_data.md`.
+    - Qualquer arquivo CSV gerado em `output_tables/` (ex: `plataformas_populares.csv`).
+    - Qualquer arquivo de imagem PNG gerado em `output_tables/` (ex: `grafico_barras.png`, `grafico_pizza.png`).
+
+    Instruções detalhadas:
+    1. **Visão Geral**: breve introdução explicando o propósito do relatório.
+    2. **Tabelas**: inclua cada CSV convertido em Markdown, diretamente embutido.
+    3. **Gráficos**: incorpore as imagens PNG usando links relativos Markdown (`![descrição](output_tables/nome_do_arquivo.png)`).
+    4. **Análise e Insights**: explique cada tabela e gráfico em parágrafos diretos.
+    5. **Conclusões e Recomendações**: finalize com sugestões estratégicas para 2025.
+
+  expected_output: >
+    - Um relatório executivo em Markdown, escrito em português do Brasil, salvo no arquivo `relatorio_final.md`, contendo:
+      - Introdução e sumário executivo.
+      - Tabelas convertidas dos CSVs (em Markdown).
+      - Gráficos embutidos como imagens.
+      - Relatório completo e coeso, pronto para ser apresentado para o CEO em português do Brasil.
+
+  agent: estrategista_de_produto

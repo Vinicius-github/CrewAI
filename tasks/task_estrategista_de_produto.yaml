@@ -1,0 +1,32 @@
+task_estrategista_de_produto:
+  description: >
+    Baseado nos outputs do analista de dados, elabore um relatório executivo em Markdown.
+
+    Leia todo o conteúdo abaixo (Contexto Automático), que já traz:
+    - Resumo da análise em `output_tables/resumo_analyze_data.md`
+    - Blocos Markdown de tabelas convertidas (CSV → Markdown)
+    - Blocos Markdown de gráficos (PNG):
+      ## Gráfico: nome_do_arquivo.png
+      ![nome_do_arquivo.png](output_tables/nome_do_arquivo.png)
+   
+
+    **Instruções CLARAS para embutir as imagens:**
+    1. **Copie literalmente** cada linha que começa com `![` (respectivo Markdown de imagem).
+    2. Essas linhas devem aparecer no corpo do relatório exatamente como estão.
+    3. Mantenha o título “## Gráfico: nome_do_arquivo.png” antes de cada `![...](...)`.
+    4. Não tente reformular ou remover nenhum “`![...](...)`” — eles devem ser reproduzidos palavra por palavra.
+
+    Ao final, inclua:
+    - Seções de “Visão Geral”, “Tabelas e Gráficos” (com as imagens), “Análise e Recomendações”.
+    - Garanta que todos os `![…](output_tables/…)` estejam no lugar exato.
+    - Use Markdown para formatação, incluindo títulos, listas e parágrafos e escreva conclusões abaixo de cada tabela ou gráfico.
+    - O relatório deve ser escrito em Português do Brasil, com foco na clareza e profissionalismo.
+    
+  expected_output: >
+    Relatório executivo em Markdown, contendo:
+    - Introdução e sumário executivo
+    - Tabelas em Markdown
+    - Blocos `![…](output_tables/…)` com todas as imagens fornecidas
+    - Texto de análise, conclusões e recomendações em Português do Brasil.
+    
+  agent: estrategista_de_produto

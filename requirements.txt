@@ -1,0 +1,11 @@
+crewai
+matplotlib
+pandas
+numpy
+requests
+seaborn
+scikit-learn
+python-dotenv
+langchain-community
+plotly
+tabulate

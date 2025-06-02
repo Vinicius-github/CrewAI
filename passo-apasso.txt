@@ -1,0 +1,9 @@
+criar o porjeto e esboçar as primeiras informações
+criar a venv
+ativar a venv
+criar o tx do requirements para conseguir rodar o projeto
+instalar as bibliotecas na venv
+criar uma pasta para o agente
+criar a pasta das tasks
+criar o arquivo main.py
+criar o arquivo crew.py

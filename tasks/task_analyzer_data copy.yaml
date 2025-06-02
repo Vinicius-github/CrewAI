@@ -1,0 +1,46 @@
+task_analyze_data:
+  description: >
+    Você é responsável por analisar a base de dados de vendas de jogos e identificar as plataformas mais populares para jogos de ação.
+    Utilize bibliotecas como pandas, matplotlib, seaborn, plotly, scikit-learn, etc.
+
+    Caminho do dataset:
+    ./dataset/vgsales.csv
+
+    Etapas obrigatórias:
+    1. Carregar o dataset com pandas.
+    2. Limpar os dados (valores nulos ou duplicados).
+    3. Filtrar jogos do gênero "Action".
+    4. Estes são os nomes das colunas que estão disponíveis no dataset na primeira linha:
+      - Rank
+      - Name
+      - Platform
+      - Year
+      - Genre
+      - Publisher
+      - NA_Sales
+      - EU_Sales
+      - JP_Sales
+      - Other_Sales
+      - Global_Sales
+
+    Instruções importantes:
+    - Cada gráfico deve ser salvo em um arquivo `.png` na pasta ./output_tables/ com nomes descritivos.
+    - Cada tabela deve ser salva em `.csv` na pasta ./output_tables/ com nomes curtos e claros.
+    - Não use plt.show(), use apenas plt.savefig e df.to_csv.
+    - O código deve funcionar com pacotes disponíveis no requirements.txt.
+    - Não utilize funções inexistentes como 'class_weight_count'.
+    - Teste se os gráficos e arquivos estão sendo salvos corretamente.
+    - Para utilizar class_weight import from sklearn.utils.class_weight import compute_class_weight
+    - Para utilizar numpy import numpy as np
+    - Para utilizar pandas import pandas as pd
+    - import matplotlib.pyplot as plt
+    - Para utilizar seaborn import seaborn as sns
+    - Para utilizar plotly import plotly.express as px
+    - Evite o erro `Erro ao executar código gerado: too many positional arguments`
+
+
+  expected_output: >
+    - As tabelas geradas devem ser salvas em CSV dentro do diretório ./output_tables/.
+    - Os gráficos gerados devem ser salvos em PNG dentro do diretório ./output_tables/.
+
+  agent: analyze_data

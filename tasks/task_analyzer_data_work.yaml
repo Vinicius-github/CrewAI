@@ -1,0 +1,25 @@
+task_analyze_data:
+  description: >
+    Você é responsável por analisar a base de dados de vendas de jogos e identificar as plataformas mais populares para jogos de ação.
+    Você sabe utilizar bem bibliotecas como pandas, matplotlib, seaborn, plottly, sckit-learn, entre outras que julga necessárias para analisar dados.
+    Carregue os dados do local indicado abaixo:
+    <caminho_dados> dataset </caminho_dados>
+
+    Etapas obrigatórias:
+    1. Carregar o dataset usando pandas.
+    2. Limpar os dados (remover valores ausentes ou duplicados).
+    3. Filtrar apenas os jogos do gênero "Action".
+    4. Gerar tabelas e gráficos como insights:
+       - Tabela com as plataformas mais populares (contagem de jogos por plataforma).
+       - Gráfico de barras mostrando a contagem de jogos por plataforma.
+       - Gráfico de pizza mostrando a proporção de jogos por plataforma.
+       - Gráfico de linha mostrando a tendência de lançamentos por ano para cada plataforma.
+       - Gráfico de dispersão mostrando a relação entre o número de vendas e a plataforma.
+       - Análise de correlação entre as vendas e outras variáveis relevantes.
+    5. Salvar a tabela em formato CSV e o gráfico gerado em formato PNG no caminho indicado:
+       <caminho_resultados> output_tables </caminho_resultados>
+  
+  agent: analyze_data
+  expected_output: >
+    Relatório com as plataformas mais populares baseado nos dados históricos.
+

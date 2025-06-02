@@ -1,0 +1,48 @@
+task_analyze_data:
+  description: >
+    Você é um analista de dados encarregado de gerar uma análise profunda da base de vendas de jogos (./dataset/vgsales.csv) focando em jogos do gênero "Action".
+
+    Objetivo:
+    - Entregar insights detalhados sobre desempenho por plataforma, evolução temporal, correlação com vendas e recomendações visuais compreensíveis para um CEO.
+
+    Etapas obrigatórias:
+    1. Carregar os dados usando pandas.
+    2. Remover valores nulos nas colunas essenciais: Name, Platform, Year, Genre, Global_Sales.
+    3. Filtrar apenas jogos com gênero "Action".
+    4. Gerar o exemplo abaixo de análise e outros que achar viavel e salvar no diretório ./output_tables/:
+       - Gráfico de barras: Top 10 plataformas com mais vendas globais (Global_Sales).
+       - Gráfico de linha: Evolução dos lançamentos de jogos de ação por ano.
+       - Gráfico de dispersão: Global_Sales vs Year.
+       - Gráfico de pizza: Distribuição dos jogos de ação por plataforma.
+       - Tabela CSV com os 10 jogos de ação mais vendidos.
+       - Tabela CSV com a média de vendas por plataforma.
+       - Matriz de correlação entre variáveis numéricas, salva em CSV e visualizada com heatmap.
+
+    5. Gerar confrme o exemplo abaixo um relatório em Markdown `insights_action_games.md` contendo:
+       - Título e introdução.
+       - Resumo dos gráficos gerados.
+       - Interpretação dos dados com linguagem acessível para executivos.
+       - Sugestões de possíveis decisões estratégicas.
+
+    Restrições:
+    - Todos os gráficos devem ser salvos em .png.
+    - Todas as tabelas em .csv.
+    - Utilize apenas bibliotecas pandas, numpy, matplotlib, seaborn, plotly.
+    - Não utilize funções inexistentes ou desatualizadas.
+    - Valide se os arquivos estão sendo salvos corretamente.
+
+    Cuidados ao gerar o código:
+    - Sempre use `.copy()` após aplicar filtros com `df[...]`.
+    - Use `.groupby(...).size()` ou `.groupby(...).sum()` antes de plotar linhas ou barras.
+    - Certifique-se de que os eixos `x` e `y` tenham o mesmo número de elementos ao plotar.
+    - Utilize `plt.tight_layout()` antes de salvar os gráficos.
+    - Todo o arquivo deve ser escrito em Português do Brasil.
+
+    
+
+  expected_output: >
+    - Arquivos gerados na pasta ./output_tables/: gráficos (.png), tabelas (.csv), relatório final (.md).
+    - Código Python funcional e modular.
+    
+
+  agent: analyze_data
